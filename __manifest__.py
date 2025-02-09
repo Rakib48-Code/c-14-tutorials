@@ -4,7 +4,7 @@
     'summary' : 'Hospital Management System',
     'category' : 'Hospital',
     'author' : 'Rakib Hasan',
-    'depends' : [],
+    'depends' : ['mail'],
     'data' : [
         'security/ir.model.access.csv',
         'views/menu.xml',
