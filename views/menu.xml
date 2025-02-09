@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <menuitem id="hospital_root_menu"
+              name="Hospital"
+              sequence="0"/>
+
+    <menuitem id="hospital_patient_root"
+              name="Patient Card"
+              parent="hospital_root_menu"
+              sequence="0"/>
+
+</odoo>
