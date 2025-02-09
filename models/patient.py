@@ -14,7 +14,7 @@ class HospitalPatient(models.Model):
                                ], string='Gender')
     contact = fields.Char(string='Contact')
     note = fields.Text(string='Description')
-    registration_date = fields.Date(string='Registration Date')
+    registration_date = fields.Date(string='Registration Date',default=fields.Date.today)
 
     # sequence number
     sl_no = fields.Char(string='Patient ID', required=True, copy=False, readonly=True,
