@@ -43,3 +43,11 @@ class HospitalPatient(models.Model):
                 rec.age_group = 'minor'
             else:
                 rec.age_group = 'major'
+
+    @api.returns('self', lambda value: value.id)
+    def copy(self, default=None):
+        if default is None:
+            default = {}
+        if not default.get('name'):
+            default['name'] = _("%s (copy)", self.name)
+        return super(HospitalPatient, self).copy(default)
