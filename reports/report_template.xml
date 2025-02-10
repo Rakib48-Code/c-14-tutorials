@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Report Template -->
+    <template id="report_hospital_patient">
+        <t t-call="web.external_layout">
+            <t t-set="doc_ids" t-value="docs.ids"/>
+            <main>
+                <t t-foreach="docs" t-as="patient">
+                    <div class="page" style="padding: 20px;">
+                        <h2 style="text-align: center; font-size: 24px; text-transform: uppercase;">Hospital Patient Report</h2>
+                        <table class="table table-bordered" style="width: 100%; border-collapse: collapse; border: 1px solid #ddd;">
+                            <thead style="background-color: #f2f2f2; text-align: left;">
+                                <tr>
+                                    <th style="padding: 8px; border: 1px solid #ddd;">Field</th>
+                                    <th style="padding: 8px; border: 1px solid #ddd;">Value</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="padding: 8px; border: 1px solid #ddd;"><strong>Patient ID:</strong></td>
+                                    <td style="padding: 8px; border: 1px solid #ddd;" t-esc="patient.sl_no"/>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 8px; border: 1px solid #ddd;"><strong>Name:</strong></td>
+                                    <td style="padding: 8px; border: 1px solid #ddd;" t-esc="patient.name"/>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 8px; border: 1px solid #ddd;"><strong>Age:</strong></td>
+                                    <td style="padding: 8px; border: 1px solid #ddd;" t-esc="patient.age"/>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 8px; border: 1px solid #ddd;"><strong>Gender:</strong></td>
+                                    <td style="padding: 8px; border: 1px solid #ddd;" t-esc="patient.gender"/>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 8px; border: 1px solid #ddd;"><strong>Age Group:</strong></td>
+                                    <td style="padding: 8px; border: 1px solid #ddd;" t-esc="patient.age_group"/>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 8px; border: 1px solid #ddd;"><strong>Contact:</strong></td>
+                                    <td style="padding: 8px; border: 1px solid #ddd;" t-esc="patient.contact"/>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 8px; border: 1px solid #ddd;"><strong>Registration Date:</strong></td>
+                                    <td style="padding: 8px; border: 1px solid #ddd;" t-esc="patient.registration_date"/>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 8px; border: 1px solid #ddd;"><strong>Description:</strong></td>
+                                    <td style="padding: 8px; border: 1px solid #ddd;" t-esc="patient.note"/>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </t>
+            </main>
+        </t>
+    </template>
+</odoo>

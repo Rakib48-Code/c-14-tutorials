@@ -11,6 +11,8 @@
         'data/patient_reference.xml',
         'views/menu.xml',
         'views/patient_view.xml',
+        'reports/report_action.xml',
+        'reports/report_template.xml',
     ],
     'sequence' : 2,
     'application' : True,
