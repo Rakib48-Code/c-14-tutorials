@@ -27,6 +27,8 @@ class HospitalPatient(models.Model):
 
     @api.model
     def create(self, vals):
+        if not vals.get('note'):
+            vals['note'] = "New Patient Created Now."
         if vals.get('sl_no', _('New')) == _('New'):
             vals['sl_no'] = self.env['ir.sequence'].next_by_code('hospital.patient') or _('New')
         if vals.get('ref', _('New')) == _('New'):
